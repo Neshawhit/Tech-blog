@@ -1,0 +1,19 @@
+<div>
+    <h1>Dashboard</h1>
+</div>
+<div>
+    <form class="blog">
+        <input  id="title" name="title" type="text">
+        <input type="text" name="userpost_content" id="content">
+        <button id="btn primary " type="submit">Submit</button>
+    </form>
+</div>
+{{#each posts}}
+<h2>{{title}}</h2>
+<p>
+    {{userpost_content}}
+</p>
+{{/each}}
+
+
+<Script src="/js/dashboard.js"> </Script>

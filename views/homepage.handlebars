@@ -1,0 +1,24 @@
+{{#each users }}
+<div class="row mb-5">
+</div>
+<div class="row align-center mb-5">
+  <div class="col-md-6">
+    <h2>{{user.name}} User Posts {{{get_emoji}}} </h2>
+  </div>
+  <div class="col-md-6">
+    <h3><a href="mailto:{{email}}">{{email}}</a></h3>
+
+<h2>{{title}}</h2>
+<p>
+    {{userpost_content}}
+</p>
+  </div>
+</div>
+{{/each}}
+<div>
+
+
+</div>
+
+
+<script src="/controllers/homeRoutes.js"></script>
