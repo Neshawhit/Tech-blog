@@ -33,9 +33,10 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.post('sign-up', async (req,res) => {
+router.post('/sign-up', async (req,res) => {
   if (req.body.signup) {
    const newUserData = await User.create(req.body)
+   console.log('user created')
    res.json(newUserData)
    res.redirect('/login')
   } else {

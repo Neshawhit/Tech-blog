@@ -32,14 +32,14 @@ router.get('/dashboard', withAuth, async (req,res) => {
   res.render('dashboard', {posts})
 });
 
-// router.get('/sign-up', (res) => {
-//   console.log('route reached')
-//   res.render('sign-up')
-// });
-
 router.get('/sign-up', (req, res) => {
-  res.render('sign-up', { loggedIn: req.session.loggedIn });
+  console.log('route reached')
+  res.render('sign-up')
 });
+
+// router.get('/sign-up', (req, res) => {
+//   res.render('sign-up', { loggedIn: req.session.loggedIn });
+// });
 
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
