@@ -46,9 +46,6 @@ router.get('/sign-up', (req, res) => {
   res.render('sign-up')
 });
 
-// router.get('/sign-up', (req, res) => {
-//   res.render('sign-up', { loggedIn: req.session.loggedIn });
-// });
 
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {

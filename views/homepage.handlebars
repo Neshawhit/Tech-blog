@@ -1,40 +1,48 @@
-{{#each users }}
+<div>
+  {{#each users }}
+  <div "row mb-2 p-2">
+    <div class="row align-top mb-2">
+      <div class="container bg-dark text-light m-4">
+        <span class="post-title ">
+          <h2 class= "bg-black" >{{user.name}}</h2>
+          <label for="post-time">{{date_created}}</label>
+          <div></div>
+        </span>
+      </div>
+    </div>
+  </div>
 
-<div class=" posts-container ">
+  {{/each}}
+</div>
+
+
+{{!-- <div class=" posts-container ">
   <div class="row mb-5">
   </div>
   <div class="row align-top mb-5">
     <div class="col-md-6">
       <h2>{{user.name}} </h2>{{date_created}}
     </div>
-    {{!-- add date to post --}}
+
     <div class="col-md-6">
       <h3><a class="bg-secondary text-white" href="./post.handlebars">{{userPost.id}}</a></h3>
       <h2 class="postTitle" href="./post.handlebars">{{title}}</h2>
       {{!-- <p>
         {{userpost_content}}
       </p> --}}
+      {{!--
     </div>
-  </div>
-  {{/each}}
-  <div>
-  </div>
-</div>
+  </div> --}}
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-<script src="/controllers/homeRoutes.js"></script>
 
-<style>
-.posts-container {
-border: black solid 5px;
-flex-box:
-{{!-- div.container{
-  width: 300px;
-  border: 15px solid green;
-  padding: 50px;
-  margin: 20px;
-} --}}
-}
-</style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="/controllers/homeRoutes.js"></script>
+
+  <style>
+    .container {
+      border: black solid 5px;
+    }
+  </style>
