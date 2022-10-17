@@ -34,6 +34,7 @@ userComment.init(
             len: [1]
         }
       }
+     
   },
   {
     sequelize,

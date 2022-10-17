@@ -3,15 +3,17 @@
 </div>
 <div class="row align-center mb-5">
   <div class="col-md-6">
-    <h2>{{user.name}} User Posts {{{get_emoji}}} </h2>
+    <h2>{{user.name}} User Posts  </h2>
   </div>
+  {{!-- add date to post --}}
+  <div>{{create_date}}</div>
   <div class="col-md-6">
-    <h3><a href="mailto:{{email}}">{{email}}</a></h3>
+    <h3><a class= "bg-secondary text-white" href="mailto:{{email}}">{{email}}</a></h3>
 
 <h2>{{title}}</h2>
-<p>
+{{!-- <p>
     {{userpost_content}}
-</p>
+</p> --}}
   </div>
 </div>
 {{/each}}
@@ -20,5 +22,6 @@
 
 </div>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 <script src="/controllers/homeRoutes.js"></script>

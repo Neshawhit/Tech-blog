@@ -27,7 +27,12 @@ userPost.init(
           model: 'user',
           key: 'id'
         }
-      }
+      },
+      // create_date: {
+      //   type: Date,
+      //   default: Date.now
+      //   }
+  
     },
     {
       sequelize,

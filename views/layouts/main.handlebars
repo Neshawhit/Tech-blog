@@ -10,18 +10,18 @@
 </head>
 
 <body  class="p-3 mb-2 bg-secondary text-white">
-  <header class="display-flex justify-space-between align-center p-2">
+  <header class="display-flex justify-space-between align-center p-2 bg-dark">
     <h1>
       Tech-Blog
     </h1>
-    <nav class="text-light">
-      <a href="/">Home</a>
-      <a href="/dashboard">Dashboard</a>
-      <a href="/login">Login</a>
+    <nav >
+      <a class="text-light bg-dark" href="/">Home</a>
+      <a class="text-light bg-dark" href="/dashboard">Dashboard</a>
+      <a class="text-light bg-dark" href="/login">Login</a>
     </nav>
     {{#if loggedIn}}
     <nav>
-      <button class="btn" id="logout">logout</button>
+      <button class="btn btn-secondary" id="logout">logout</button>
     </nav>
     {{/if}}
   </header>
