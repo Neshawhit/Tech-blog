@@ -28,10 +28,10 @@ userPost.init(
           key: 'id'
         }
       },
-      // create_date: {
-      //   type: Date,
-      //   default: Date.now
-      //   }
+      date_created: {
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW,
+      },
   
     },
     {

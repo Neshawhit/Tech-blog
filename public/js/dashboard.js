@@ -4,10 +4,10 @@ const userBlogHandler = async (event) => {
     const title = document.querySelector('#title').value.trim();
     const userpost_content = document.querySelector('#content').value.trim();
   
-    if (title && userpost_content && create_date) {
+    if (title && userpost_content && date_created) {
       const response = await fetch('/api/blogs', {
         method: 'POST',
-        body: JSON.stringify({title, userpost_content, create_date}),
+        body: JSON.stringify({title, userpost_content, date_created}),
         headers: { 'Content-Type': 'application/json' },
       });
   
