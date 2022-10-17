@@ -21,6 +21,6 @@ const userPostHandler = async (event) => {
   };
   
   document
-    .querySelector('.postTitle')
+    .querySelector('#post-contents')
     .addEventListener('click', userPostHandler);
   
