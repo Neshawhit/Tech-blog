@@ -20,27 +20,28 @@
         {{usercomment_text}}
     </p>
     {{/each}}
-<button class="btn btn-info commentbtn"id="btn" >Add a Comment</button>
+    <button class="btn btn-info commentbtn" id="btn">Add a Comment</button>
 
+    <div>
+        <form class="new-comment">
+            <input type="text" name="usercomment_text" id="user-comment" placeholder="Comment">
+            <button id="btn primary " type="submit">Submit</button>
+        </form>
+    </div>
 <div>
-     <form class="new-comment">
-        <input type="text" name="usercomment_text" id="user-comment" placeholder="Comment">
-        <button id="btn primary " type="submit">Submit</button>
-    </form>
-</div>
 
-<Script src="/js/dashboard.js"> </Script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <Script src="/js/dashboard.js"> </Script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-{{!-- fix post structure --}}
-<style>
-    .container {
-        border: 5px black solid;
-    }
-    .form {
-        border-bottom: black 3px solid;
-        margin-bottom: 6px;
-    }
-    
-</style>
+        {{!-- fix post structure --}}
+        <style>
+            .container {
+                border: 5px black solid;
+            }
+
+            .form {
+                border-bottom: black 3px solid;
+                margin-bottom: 6px;
+            }
+        </style>
