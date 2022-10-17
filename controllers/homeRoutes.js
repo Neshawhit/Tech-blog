@@ -32,6 +32,15 @@ router.get('/dashboard', withAuth, async (req,res) => {
   res.render('dashboard', {posts})
 });
 
+router.get('/post', withAuth, async (req,res) => {
+  const blogs = await userPost.findAll({
+    where: {user_id: req.session.user_id }
+  })
+  const posts = blogs.map(blog => blog.get({plain: true}))
+  console.log(posts)
+  res.render('post', {posts})
+});
+
 router.get('/sign-up', (req, res) => {
   console.log('route reached')
   res.render('sign-up')
