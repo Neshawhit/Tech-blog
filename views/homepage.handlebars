@@ -1,20 +1,21 @@
 <div>
-  {{#each users }}
-  <div "row mb-2 p-2">
-    <div class="row align-top mb-2">
-      <div class="container bg-dark text-light m-4">
-        <span class="post-title ">
-          <h2 class="bg-black">{{user.name}}</h2>
-          <label for="post-time">{{date_created}}</label>
-          <div>
-            <h2 id="post-contents title">{{title}}</h2>
-          </div>
-        </span>
+  <a href="/post/{{userPost}}">
+    {{#each users }}
+    <div "row mb-2 p-2">
+      <div class="row align-top mb-2">
+        <div class="container bg-dark text-light m-4">
+          <span class="post-title ">
+            <h2 class="bg-black">{{user.name}}</h2>
+            <label for="post-time">{{date_created}}</label>
+            <div>
+              <h2 id="post-contents title">{{title}}</h2>
+            </div>
+          </span>
+        </div>
       </div>
     </div>
-  </div>
 
-  {{/each}}
+    {{/each}}
 </div>
 
 
@@ -42,7 +43,7 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   <script src="/controllers/homeRoutes.js"></script>
-  <script src="/public/js/post.js></script>
+  <script src="/public/js/post.js"></script>
 
   <style>
     .container {

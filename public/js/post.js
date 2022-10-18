@@ -5,7 +5,7 @@ const userPostHandler = async (event) => {
 
   
     if (title ) {
-      const response = await fetch('/api/Post', {
+      const response = await fetch('/api/users/post', {
         method: 'POST',
         body: JSON.stringify({title}),
         headers: { 'Content-Type': 'application/json' },

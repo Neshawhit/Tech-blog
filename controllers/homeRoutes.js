@@ -11,7 +11,7 @@ router.get('/', withAuth, async (req, res) => {
         required: true
        }]})
 
-   
+    
     const users = userData.map((project) => project.get({ plain: true }));
 console.log(users)
     res.render('homepage', {
@@ -31,6 +31,14 @@ router.get('/dashboard', withAuth, async (req,res) => {
   console.log(posts)
   res.render('dashboard', {posts})
 });
+// router.get('/user/post', withAuth, async (req,res) => {
+//   const blogs = await userPost.findOne({
+//     where: {user_id: req.session.user_id }
+//   })
+//   const posts = blogs.map(blog => blog.get({plain: true}))
+//   console.log(posts)
+//   res.render('post', {posts})
+// });
 
 router.get('/post', withAuth, async (req,res) => {
   const blogs = await userPost.findAll({
