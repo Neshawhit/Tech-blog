@@ -1,21 +1,42 @@
+<h3> Posts </h3>
 <div>
-  <a href="/post/{{userPost}}">
-    {{#each users }}
-    <div "row mb-2 p-2">
-      <div class="row align-top mb-2">
-        <div class="container bg-dark text-light m-4">
-          <span class="post-title ">
-            <h2 class="bg-black">{{user.name}}</h2>
-            <label for="post-time">{{date_created}}</label>
-            <div>
-              <h2 id="post-contents title">{{title}}</h2>
+  {{#each posts }}
+  <div "row mb-2 p-2">
+    <div class="row align-top mb-2">
+      <div class="container bg-dark text-light m-4">
+        <span class="post-title ">
+          <div class="home-h2 row d-flex justify-content-between bg-black">
+            <h2 class="ml-2">{{user.name}}</h2>
+            <label class="date mr-2" for="post-time">{{date_created}}</label>
+          </div>
+
+          <h2 id="post-contents title">
+            <a href="/post/{{id}}">
+              {{title}}
+            </a>
+          </h2>
+
+          <div class="comment-container bg-black mb-5">
+            <h5 class=" ">Comments</h5>
+            <div class="container-c m-2 bg-dark ">
+              {{#each comments as |comment| }}
+
+              </h6 class="bg-black mr-5">
+              {{comment.user.name}}
+              <h6>
+
+
+                <p>{{comment.text}}</p>
+                {{/each}}
             </div>
-          </span>
-        </div>
+            <div>
+
+        </span>
       </div>
     </div>
+  </div>
 
-    {{/each}}
+  {{/each}}
 </div>
 
 
@@ -48,5 +69,17 @@
   <style>
     .container {
       border: black solid 5px;
+    }
+
+    .date {
+      justs;
+    }
+
+    .comment-container {
+      border: black solid 3px;
+    }
+    .container-c{
+      border: black solid 3px;
+   
     }
   </style>

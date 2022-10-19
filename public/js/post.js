@@ -13,7 +13,7 @@ const userPostHandler = async (event) => {
   
       if (response.ok) {
         console.log(response)
-        document.location.replace('/post');
+        // document.location.replace('/post');
       } else {
         alert('Failed to create Post');
       }

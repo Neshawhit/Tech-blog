@@ -1,35 +1,33 @@
 <div class="userPost">
   <article class="card">
     <div class="card-header flex-row justify-space-between">
-      <h2>{{userPost.title}}</h2>
+      <h2>{{post.title}}</h2>
       <div>
-        userPost Created: {{date_created}} by {{userPost.User.name}} 
+         Created: {{post.date_created}} by {{post.user.name}}
       </div>
     </div>
     <div class="card-body">
-      {{userPost.body}}
+   
+      <p class="text-dark">{{post.content}}</p>
+ 
     </div>
   </article>
 
-  {{#if userPost.userpost_content}}
-    <section class="card">
-      <div class="card-header">
-        <h3>userpost_content</h3>
+  {{#if post.comments}}
+  {{#each posts.comments}}
+  <section class="card">
+    <div class="card-body">
+      <div>
+        <p>
+          {{text}}
+        </p>
+        <p>
+          &mdash; {{user.name}}, {{date_created}}
+        </p>
       </div>
-
-      <div class="card-body">
-        {{#each userPost.userpost_content}}
-          <div>
-            <p>
-              {{body}}
-            </p>
-            <p>
-              &mdash; {{User.name}}, {{date_created}}
-            </p>
-          </div>
-        {{/each}}
-      </div>
-    </section>
+    </div>
+  </section>
+  {{/each}}
   {{/if}}
 
   <form id="new-comment-form" class="card">
@@ -38,17 +36,17 @@
     </div>
 
     <div class="card-body">
-      <input type="hidden" name="userPost-id" value="{{userPost.id}}" />
+      <input type="hidden" name="userPost-id" value="{{post.id}}" />
 
       <label class="form-label" for="comment-body">Comment</label>
 
-      <textarea name="comment-body" class="form-input"></textarea>
+      <textarea name="comment-body" id="text" class="form-input"></textarea>
 
-      <button type="submit" class="btn">Submit</button>
+      <button type="submit" class="btn "id ="post-contents">Submit</button>
     </div>
   </form>
 </div>
 
-<script src="/models/userComment.js" src="/models/userPost.js"></script>
+{{!-- <script src="/js/post.js"></script> --}}
+<script src="/js/comment.js"></script>
 
-{{!-- make post clickable to render this handle bar --}}
